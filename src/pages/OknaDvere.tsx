@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/Icon";
 import { ChecklistItem, CtaBand, Eyebrow, PageHero, Seo } from "@/components/ui";
-import { doorHardware, profiles, stock, windowHardware, type Profile } from "@/data/site";
+import { doorHardware, profiles, windowHardware, type Profile } from "@/data/site";
 
 const steps = [
   ["Odborné poradenství", "Zdarma probereme typ domu, orientaci, požadavky na izolaci i rozpočet."],
@@ -67,7 +67,8 @@ export default function OknaDvere() {
         eyebrow="Okna a dveře"
         title={<>Plastová, dřevěná a hliníková okna, která ušetří až <span className="text-[#E09A58]">40 %</span> na vytápění</>}
         lead="Dodáváme a montujeme okna a dveře nejvyšší kvality. Značky Kömmerling, Inoutic Prestige, Arcade a Eforte. Od poradenství přes zaměření až po zednické začištění."
-        image={stock.hero}
+        image="/img/foto/novostavba-bungalov.jpg"
+        imageAlt="Novostavba s hnědými okny a dveřmi"
       >
         <div className="mt-10 flex flex-wrap gap-3">
           <a href="#profily" className="btn-blue px-7 py-4">Profily Kömmerling 76 a 88</a>
@@ -148,15 +149,41 @@ export default function OknaDvere() {
                 ))}
               </ul>
               <div className="mt-10 grid grid-cols-2 gap-3">
-                <img src="/img/gallery/foto05.jpg" alt="Vchodové dveře v dekoru dřeva" className="h-48 w-full object-cover" />
-                <img src="/img/gallery/foto08.jpg" alt="Dřevěné vchodové dveře" className="h-48 w-full object-cover" />
+                <img src="/img/foto/vchodove-dvere-antracit.jpg" alt="Moderní vchodové dveře v antracitu" className="h-56 w-full object-cover" />
+                <img src="/img/gallery/foto05.jpg" alt="Vchodové dveře v dekoru dřeva" className="h-56 w-full object-cover" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="section-pad bg-white">
+        <div className="mx-auto max-w-[1220px] px-5">
+          <div className="grid items-end gap-8 lg:grid-cols-[1fr_.8fr]">
+            <div>
+              <Eyebrow>Velkoplošné prosklení</Eyebrow>
+              <h2>Posuvné HS portály a zimní zahrady</h2>
+            </div>
+            <p className="leading-7 text-black/58 lg:justify-self-end">
+              Zdvižně-posuvné dveře (HS portál) otevřou obývací pokoj na terasu bez prahu a bez sloupků. Prosklené stěny a zimní zahrady stavíme ze stejných profilů Kömmerling — se stejnou izolací jako okna.
+            </p>
+          </div>
+          <div className="mt-12 grid auto-rows-[260px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              ["/img/foto/hs-portal-dub.jpg", "Posuvný HS portál, dekor zlatý dub"],
+              ["/img/foto/zimni-zahrada.jpg", "Prosklení zimní zahrady"],
+              ["/img/foto/proskleni-terasa.jpg", "Prosklená stěna na terasu"],
+            ].map(([src, title]) => (
+              <figure key={src} className="gallery-item">
+                <img src={src} alt={title} loading="lazy" className="h-full w-full object-cover" />
+                <figcaption><span>{title}</span></figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#E7ECEB]">
         <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
           <div className="relative min-h-[380px] overflow-hidden">
             <img src="/img/gallery/Image01.jpg" alt="Řez okenním profilem s izolačním trojsklem" className="absolute inset-0 h-full w-full object-cover" />

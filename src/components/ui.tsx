@@ -33,6 +33,7 @@ export function PageHero({
   lead,
   image,
   imageAlt = "",
+  imagePosition = "object-center",
   warm = false,
   children,
 }: {
@@ -41,6 +42,8 @@ export function PageHero({
   lead?: string;
   image?: string;
   imageAlt?: string;
+  /** Tailwind object-position class, e.g. "object-[center_70%]" for portrait photos. */
+  imagePosition?: string;
   warm?: boolean;
   children?: ReactNode;
 }) {
@@ -48,7 +51,7 @@ export function PageHero({
     <section className="relative overflow-hidden bg-[#1E2429] text-white">
       {image && (
         <>
-          <img src={image} alt={imageAlt} className="absolute inset-0 h-full w-full object-cover" />
+          <img src={image} alt={imageAlt} className={`absolute inset-0 h-full w-full object-cover ${imagePosition}`} />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,24,28,.97)_0%,rgba(18,24,28,.88)_45%,rgba(18,24,28,.35)_100%)]" />
         </>
       )}

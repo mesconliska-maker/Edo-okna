@@ -31,7 +31,8 @@ export default function Fotogalerie() {
         eyebrow="Fotogalerie"
         title="Realizace, za kterými si stojíme"
         lead="Výběr z dokončených montáží oken a dveří — novostavby, rekonstrukce i komerční objekty v Plzeňském kraji."
-        image="/img/gallery/Image02.jpg"
+        image="/img/foto/zimni-zahrada.jpg"
+        imageAlt="Prosklení zimní zahrady"
       />
 
       <section className="section-pad">

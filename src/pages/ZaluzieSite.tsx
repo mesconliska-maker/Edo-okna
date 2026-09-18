@@ -14,6 +14,8 @@ export default function ZaluzieSite() {
         title="Světlo, soukromí a klid od hmyzu — přesně podle vás"
         lead="Široký výběr stínicí techniky v mnoha barvách a vzorech. Plus nenápadné sítě proti hmyzu do nových i stávajících oken a dveří."
         image={stock.blinds}
+        imageAlt="Plisé žaluzie v interiéru"
+        imagePosition="object-[center_40%]"
       />
 
       <section className="section-pad">
@@ -51,7 +53,7 @@ export default function ZaluzieSite() {
       <section className="bg-[#E7ECEB]">
         <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
           <div className="relative min-h-[380px] overflow-hidden">
-            <img src="/img/b-2.jpg" alt="Horizontální žaluzie v okně" className="absolute inset-0 h-full w-full object-cover" />
+            <img src="/img/foto/plise-zaluzie.jpg" alt="Plisé žaluzie na oknech v novostavbě" className="absolute inset-0 h-full w-full object-cover" />
           </div>
           <div className="section-pad px-5 lg:pl-20 lg:pr-[max(2rem,calc((100vw-1220px)/2))]">
             <Eyebrow warm>Předokenní rolety</Eyebrow>

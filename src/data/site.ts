@@ -30,10 +30,10 @@ export const nav = [
 ];
 
 export const stock = {
-  hero: "https://images.unsplash.com/photo-1657346088167-b982455bf29a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=88&w=1800",
-  garage: "https://images.unsplash.com/photo-1558661091-5cc1b64d0dc5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1200",
-  window: "https://images.unsplash.com/photo-1582586587646-b55bb2058ea4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1200",
-  blinds: "https://images.unsplash.com/photo-1564078516393-cf04bd966897?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1400",
+  hero: "/img/foto/bytovy-dum.jpg",
+  garage: "/img/foto/garazova-vrata-sekcni.jpg",
+  window: "/img/foto/hs-portal-dub.jpg",
+  blinds: "/img/foto/plise-zaluzie.jpg",
 };
 
 export type Service = {
@@ -158,6 +158,22 @@ export const blinds: [string, string][] = [
 ];
 
 export const galleryPhotos = [
+  { src: "/img/foto/bytovy-dum.jpg", title: "Bytový dům — kompletní výměna oken" },
+  { src: "/img/foto/garazova-vrata-sekcni.jpg", title: "Sekční garážová vrata TRIDO v dekoru dřeva" },
+  { src: "/img/foto/hs-portal-dub.jpg", title: "Posuvný HS portál, dekor zlatý dub" },
+  { src: "/img/foto/novostavba-bungalov.jpg", title: "Bungalov — hnědá okna a dveře" },
+  { src: "/img/foto/vchodove-dvere-antracit.jpg", title: "Vchodové dveře v antracitu" },
+  { src: "/img/foto/zimni-zahrada.jpg", title: "Prosklení zimní zahrady" },
+  { src: "/img/foto/plise-zaluzie.jpg", title: "Plisé žaluzie v interiéru" },
+  { src: "/img/foto/proskleni-terasa.jpg", title: "Velkoplošné prosklení na terasu" },
+  { src: "/img/foto/novostavba-hneda-okna.jpg", title: "Novostavba — okna a vchodové dveře" },
+  { src: "/img/foto/hs-portal-montaz.jpg", title: "Montáž posuvných dveří" },
+  { src: "/img/foto/zimni-zahrada-2.jpg", title: "Zimní zahrada — dřevodekor" },
+  { src: "/img/foto/posuvne-dvere-porotherm.jpg", title: "Posuvné dveře v hrubé stavbě" },
+  { src: "/img/foto/okna-novostavba-ytong.jpg", title: "Bílá okna a balkonové dveře, novostavba" },
+  { src: "/img/foto/garazova-vrata-hruba-stavba.jpg", title: "Garážová vrata a okna v hrubé stavbě" },
+  { src: "/img/foto/zahradni-domek-okna.jpg", title: "Okna a dveře zahradního domku" },
+  { src: "/img/foto/bytovy-dum-2.jpg", title: "Bytový dům po výměně oken" },
   { src: "/img/gallery/Image02.jpg", title: "Plastová okna, rodinný dům" },
   { src: "/img/gallery/foto09.jpg", title: "Výkladce a vstupní dveře, Stříbro" },
   { src: "/img/gallery/foto05.jpg", title: "Vchodové dveře v dekoru dřeva" },

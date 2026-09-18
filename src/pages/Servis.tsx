@@ -21,7 +21,8 @@ export default function Servis() {
         eyebrow="Servis a opravy"
         title="Když okno drhne, netěsní nebo se rosí — pomůžeme"
         lead="Poskytujeme záruční i pozáruční servis a opravy oken, dveří a stínicí techniky. Rádi vám poradíme a doporučíme vhodné řešení."
-        image="/img/b-4.jpg"
+        image="/img/foto/hs-portal-montaz.jpg"
+        imageAlt="Montáž posuvných dveří"
       />
 
       <section className="section-pad">

@@ -22,7 +22,8 @@ export default function Instituce() {
         title="Zkušenosti i s veřejnými zakázkami"
         lead="Připravujeme samostatné, transparentní nabídky pro školy, obce a orgány státní správy. Od technické specifikace přes harmonogram až po přesné předání."
         warm
-        image="/img/gallery/foto09.jpg"
+        image="/img/foto/bytovy-dum-2.jpg"
+        imageAlt="Bytový dům po výměně oken"
       />
 
       <section className="section-pad">

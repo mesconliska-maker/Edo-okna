@@ -13,7 +13,7 @@ export default function Home() {
       />
 
       <section className="relative min-h-[760px] overflow-hidden bg-[#1E2429] text-white">
-        <img src={stock.hero} alt="Moderní rodinný dům s velkými okny" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <img src={stock.hero} alt="Bytový dům po kompletní výměně oken — realizace EDO OKNA" className="absolute inset-0 h-full w-full object-cover object-center" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,24,28,.96)_0%,rgba(18,24,28,.82)_48%,rgba(18,24,28,.18)_100%)]" />
         <div className="absolute inset-0 technical-grid opacity-20" />
         <div className="relative mx-auto flex min-h-[760px] max-w-[1280px] items-center px-5 py-24 lg:px-8">
@@ -142,7 +142,7 @@ export default function Home() {
       <section className="section-pad bg-white">
         <div className="mx-auto grid max-w-[1220px] items-center gap-12 px-5 lg:grid-cols-2 lg:gap-20">
           <div className="relative min-h-[560px] overflow-hidden bg-[#1E2429]">
-            <img src={stock.window} alt="Detail kvalitního okenního rámu" className="absolute inset-0 h-full w-full object-cover opacity-75" />
+            <img src={stock.window} alt="Posuvný HS portál v dekoru zlatý dub" className="absolute inset-0 h-full w-full object-cover opacity-85" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1E2429] via-transparent to-transparent" />
             <div className="absolute right-6 bottom-6 left-6 border border-white/20 bg-[#1E2429]/85 p-6 text-white backdrop-blur">
               <div className="flex items-center gap-4">
@@ -221,7 +221,7 @@ export default function Home() {
       <section className="bg-[#1E2429] text-white">
         <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
           <div className="relative min-h-[420px] lg:min-h-[510px]">
-            <img src={stock.garage} alt="Moderní garážová vrata" className="absolute inset-0 h-full w-full object-cover opacity-80" />
+            <img src={stock.garage} alt="Sekční garážová vrata TRIDO v dekoru dřeva" className="absolute inset-0 h-full w-full object-cover object-[center_62%] opacity-90" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1E2429]/45" />
           </div>
           <div className="section-pad flex items-center px-5 lg:pl-20 lg:pr-[max(2rem,calc((100vw-1220px)/2))]">

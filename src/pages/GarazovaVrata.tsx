@@ -14,6 +14,8 @@ export default function GarazovaVrata() {
         title="Sekční i rolovací vrata TRIDO, i s elektrickým pohonem"
         lead="Spolehlivá garážová vrata navržená na míru vašemu domu. Komfortní ovládání elektrickým pohonem a dálkovým ovladačem — z auta, bez vystupování."
         image={stock.garage}
+        imageAlt="Sekční garážová vrata TRIDO v dekoru dřeva"
+        imagePosition="object-[center_58%]"
       />
 
       <section className="section-pad">
@@ -46,6 +48,19 @@ export default function GarazovaVrata() {
               </ul>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-[1440px] gap-1 sm:grid-cols-2">
+          <figure className="gallery-item min-h-[340px]">
+            <img src="/img/foto/garazova-vrata-sekcni.jpg" alt="Hotová sekční vrata TRIDO v dekoru dřeva" className="h-full w-full object-cover" />
+            <figcaption><span>Sekční vrata TRIDO, dekor zlatý dub</span></figcaption>
+          </figure>
+          <figure className="gallery-item min-h-[340px]">
+            <img src="/img/foto/garazova-vrata-hruba-stavba.jpg" alt="Montáž garážových vrat v hrubé stavbě" className="h-full w-full object-cover" />
+            <figcaption><span>Montáž vrat a oken v hrubé stavbě</span></figcaption>
+          </figure>
         </div>
       </section>
 
