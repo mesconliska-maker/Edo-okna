@@ -2,14 +2,26 @@ import { useState, type ReactNode } from "react";
 
 const heroImage =
   "https://images.unsplash.com/photo-1657346088167-b982455bf29a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=88&w=1800";
-const interiorImage =
-  "https://images.unsplash.com/photo-1564078516393-cf04bd966897?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1400";
 const garageImage =
   "https://images.unsplash.com/photo-1558661091-5cc1b64d0dc5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1200";
 const windowImage =
   "https://images.unsplash.com/photo-1582586587646-b55bb2058ea4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1200";
-const houseImage =
-  "https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1400";
+
+// Real photos migrated from www.oknastribro.cz
+const galleryPhotos = [
+  { src: "/img/gallery/Image02.jpg", title: "Plastová okna, rodinný dům" },
+  { src: "/img/gallery/foto09.jpg", title: "Výkladce a vstupní dveře, Stříbro" },
+  { src: "/img/gallery/foto05.jpg", title: "Vchodové dveře v dekoru dřeva" },
+  { src: "/img/gallery/foto03.jpg", title: "Montáž oken v novostavbě" },
+  { src: "/img/gallery/Image03.jpg", title: "Výměna oken, starší zástavba" },
+  { src: "/img/gallery/foto08.jpg", title: "Dřevěné vchodové dveře" },
+  { src: "/img/gallery/Image04.jpg", title: "Okna a dveře, rodinný dům" },
+  { src: "/img/gallery/foto01.jpg", title: "Novostavba, kompletní dodávka" },
+  { src: "/img/gallery/foto02.jpg", title: "Hrubá stavba před montáží" },
+  { src: "/img/gallery/foto04.jpg", title: "Osazení oken a dveří" },
+  { src: "/img/gallery/foto06.jpg", title: "Posuvné dveře na terasu" },
+  { src: "/img/gallery/foto07.jpg", title: "Prosklená stěna" },
+];
 
 type IconName =
   | "arrow"
@@ -137,28 +149,76 @@ function Eyebrow({ children, warm = false }: { children: ReactNode; warm?: boole
 const services = [
   {
     icon: "window" as const,
+    image: "/img/b-1.jpg",
     title: "Montáž oken a dveří",
-    text: "Zaměříme a namontujeme plastová, dřevěná i hliníková okna včetně parapetů a čistého začištění.",
+    text: "Plastová, dřevěná i hliníková okna a dveře. Poradíme, zaměříme, demontujeme původní okna, namontujeme včetně parapetů a zednického začištění.",
   },
   {
     icon: "sun" as const,
+    image: "/img/b-2.jpg",
     title: "Montáž žaluzií",
-    text: "Horizontální, vertikální i zatemňující žaluzie, předokenní rolety a široký výběr barev.",
+    text: "Horizontální, vertikální i zatemňující žaluzie a předokenní rolety v mnoha barvách a vzorech. Včetně demontáže stávajících.",
   },
   {
     icon: "screen" as const,
+    image: "/img/b-3.jpg",
     title: "Sítě proti hmyzu",
-    text: "Moderní, přesně zaměřené sítě pro okna i dveře, které nenaruší vzhled vašeho domova.",
+    text: "Nenápadné sítě z jemného, ale odolného vlákna do nových i stávajících oken a dveří. Nebrání otevírání ani vyklápění.",
   },
   {
     icon: "service" as const,
+    image: "/img/b-4.jpg",
     title: "Servis a opravy",
-    text: "Seřízení a opravy stávajících oken. Rádi poradíme a doporučíme vhodné a úsporné řešení.",
+    text: "Záruční i pozáruční servis oken, dveří a stínicí techniky. Seřízení, výměna prvků a odborné poradenství.",
+  },
+];
+
+const profiles = [
+  {
+    num: "76",
+    image: "/img/profil76/System-76-AD-Standard-1-bila.jpg",
+    title: "Kömmerling Profil 76",
+    text: "Šestikomorový profil se stavební hloubkou 76 mm, třemi těsněními a trojsklem. Spolehlivá volba pro novostavby i rekonstrukce.",
+    specs: [
+      ["Stavební hloubka", "76 mm"],
+      ["Počet komor", "6"],
+      ["Těsnění", "3"],
+      ["Prostup tepla Uw", "0,73–0,98 W/m²K"],
+      ["Zvuková izolace", "až 40 dB"],
+      ["Kování", "Siegenia Titan AF"],
+    ] as [string, string][],
+    colors: [
+      ["Bílá", "#f4f4f2"],
+      ["Zlatý dub", "#a86b2c"],
+      ["Šedá", "#8a8d8f"],
+      ["Hnědá", "#5a3d28"],
+    ] as [string, string][],
+  },
+  {
+    num: "88",
+    image: "/img/profil88/System-88-1-bila.jpg",
+    title: "Kömmerling Profil 88",
+    text: "Sedmikomorový systém se stavební hloubkou 88 mm — špička v tepelně izolačních vlastnostech pro pasivní a nízkoenergetické domy.",
+    specs: [
+      ["Stavební hloubka", "88 mm"],
+      ["Počet komor", "7"],
+      ["Těsnění", "3"],
+      ["Prostup tepla Uw", "0,72–0,96 W/m²K"],
+      ["Zvuková izolace", "až 40 dB"],
+      ["Kování", "Siegenia Titan AF"],
+    ] as [string, string][],
+    colors: [
+      ["Bílá", "#f4f4f2"],
+      ["Zlatý dub", "#a86b2c"],
+      ["Antracit", "#3a3d40"],
+      ["Šedá", "#8a8d8f"],
+    ] as [string, string][],
   },
 ];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#F3F3EE] text-[#1B2126]">
@@ -251,17 +311,23 @@ export default function App() {
         </section>
 
         <section className="border-b border-black/10 bg-white">
-          <div className="mx-auto grid max-w-[1280px] divide-y divide-black/10 px-5 md:grid-cols-3 md:divide-x md:divide-y-0 lg:px-8">
-            {[
-              ["shield", "Nejvyšší úroveň", "certifikace Spolehlivá firma"],
-              ["grid", "Kömmerling 76 a 88", "prověřené profilové systémy"],
-              ["school", "Školy a státní správa", "nabídky pro veřejné zakázky"],
-            ].map(([icon, title, text]) => (
-              <div key={title} className="flex items-center gap-4 py-7 md:px-7 first:pl-0">
-                <Icon name={icon as IconName} className="h-9 w-9 shrink-0 text-[#2E6B8A]" />
-                <div><b className="block text-sm">{title}</b><span className="text-xs text-black/55">{text}</span></div>
-              </div>
-            ))}
+          <div className="mx-auto grid max-w-[1280px] divide-y divide-black/10 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-y-0 lg:px-8">
+            <div className="flex items-center gap-4 py-6 lg:pr-7">
+              <img src="/img/spolehliva-firma.png" alt="Spolehlivá firma 2023 — ocenění Živé firmy" className="h-14 w-14 shrink-0" />
+              <div><b className="block text-sm">Spolehlivá firma</b><span className="text-xs text-black/55">nejvyšší úroveň certifikace</span></div>
+            </div>
+            <div className="flex items-center gap-4 py-6 lg:px-7">
+              <img src="/img/ceska-okna.jpg" alt="Certifikát Zaručeně česká okna" className="h-14 w-14 shrink-0" />
+              <div><b className="block text-sm">Zaručeně česká okna</b><span className="text-xs text-black/55">certifikát 2018 a 2019</span></div>
+            </div>
+            <div className="flex items-center gap-4 py-6 lg:px-7">
+              <Icon name="grid" className="h-9 w-9 shrink-0 text-[#2E6B8A]" />
+              <div><b className="block text-sm">Kömmerling 76 a 88</b><span className="text-xs text-black/55">prověřené profilové systémy</span></div>
+            </div>
+            <div className="flex items-center gap-4 py-6 lg:pl-7">
+              <Icon name="school" className="h-9 w-9 shrink-0 text-[#2E6B8A]" />
+              <div><b className="block text-sm">Školy a státní správa</b><span className="text-xs text-black/55">nabídky pro veřejné zakázky</span></div>
+            </div>
           </div>
         </section>
 
@@ -279,9 +345,12 @@ export default function App() {
             <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service, index) => (
                 <article key={service.title} className="service-card group">
-                  <span className="absolute top-5 right-6 text-[10px] font-bold tracking-widest text-black/25">0{index + 1}</span>
-                  <div className="mb-10 grid h-12 w-12 place-items-center bg-[#2E6B8A]/10 text-[#2E6B8A] transition-colors group-hover:bg-[#2E6B8A] group-hover:text-white">
-                    <Icon name={service.icon} />
+                  <div className="relative -mx-[1.65rem] -mt-8 mb-7 h-40 overflow-hidden bg-[#1E2429]">
+                    <img src={service.image} alt="" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                    <span className="absolute top-4 right-5 text-[10px] font-bold tracking-widest text-white/70">0{index + 1}</span>
+                    <div className="absolute bottom-0 left-6 grid h-11 w-11 translate-y-1/2 place-items-center bg-[#2E6B8A] text-white shadow-lg">
+                      <Icon name={service.icon} className="h-5 w-5" />
+                    </div>
                   </div>
                   <h3 className="text-xl font-bold">{service.title}</h3>
                   <p className="mt-4 text-sm leading-6 text-black/55">{service.text}</p>
@@ -299,36 +368,46 @@ export default function App() {
                 <Eyebrow>Technologie</Eyebrow>
                 <h2>Profily Kömmerling.<br />Dlouhá životnost,<br />reálná úspora.</h2>
                 <p className="mt-7 max-w-md leading-7 text-white/58">
-                  Precizně navržené německé profilové systémy s výbornou tepelnou izolací pro rekonstrukce i novostavby.
+                  Precizně navržené německé profilové systémy s výbornou tepelnou izolací pro rekonstrukce i novostavby. Oba systémy splňují nároky pasivních a nízkoenergetických domů.
                 </p>
+                <img src="/img/koemmerling.png" alt="Kömmerling" className="mt-7 h-8 w-auto rounded bg-white px-2 py-1" />
                 <div className="mt-12 border-l-2 border-[#C4762E] pl-6">
                   <b className="text-6xl tracking-[-.06em] text-[#E6A05D]">až 40 %</b>
                   <p className="mt-2 text-sm font-semibold">úspora nákladů na vytápění</p>
                 </div>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
-                {[
-                  ["76", "Kömmerling Profil 76", "Univerzální stavební hloubka 76 mm pro spolehlivou izolaci a široké možnosti použití.", ["Promyšlená vícekomorová konstrukce", "Moderní tenký vzhled", "Vhodný pro renovace"]],
-                  ["88", "Kömmerling Profil 88", "Prémiový systém se stavební hloubkou 88 mm pro nejvyšší nároky na tepelný komfort.", ["Vynikající tepelná izolace", "Robustní moderní konstrukce", "Ideální pro nízkoenergetické domy"]],
-                ].map(([num, title, text, bullets]) => (
-                  <article key={title as string} className="profile-card">
+                {profiles.map((profile) => (
+                  <article key={profile.num} className="profile-card">
                     <div className="flex items-start justify-between">
-                      <span className="text-7xl font-extrabold tracking-[-.08em] text-white/10">{num as string}</span>
-                      <Icon name="window" className="h-10 w-10 text-[#5D9CBA]" />
+                      <span className="text-7xl font-extrabold tracking-[-.08em] text-white/10">{profile.num}</span>
+                      <img src={profile.image} alt={`Řez profilem Kömmerling ${profile.num}`} className="h-28 w-28 rounded bg-white object-contain p-1" />
                     </div>
-                    <p className="mt-10 text-[10px] font-bold tracking-[.2em] text-[#6EAAC7] uppercase">Profilový systém</p>
-                    <h3 className="mt-2 text-2xl font-bold">{title as string}</h3>
-                    <p className="mt-4 text-sm leading-6 text-white/55">{text as string}</p>
-                    <ul className="mt-7 space-y-3">
-                      {(bullets as string[]).map((bullet) => (
-                        <li key={bullet} className="flex gap-3 text-xs text-white/70"><Icon name="check" className="h-4 w-4 shrink-0 text-[#C4762E]" />{bullet}</li>
+                    <p className="mt-6 text-[10px] font-bold tracking-[.2em] text-[#6EAAC7] uppercase">Profilový systém</p>
+                    <h3 className="mt-2 text-2xl font-bold">{profile.title}</h3>
+                    <p className="mt-4 text-sm leading-6 text-white/55">{profile.text}</p>
+                    <dl className="mt-7 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-white/10 pt-6">
+                      {profile.specs.map(([label, value]) => (
+                        <div key={label}>
+                          <dt className="text-[10px] font-bold tracking-[.14em] text-white/40 uppercase">{label}</dt>
+                          <dd className="mt-0.5 text-sm font-semibold text-white/85">{value}</dd>
+                        </div>
                       ))}
-                    </ul>
+                    </dl>
+                    <div className="mt-6 flex items-center gap-2">
+                      {profile.colors.map(([name, hex]) => (
+                        <span key={name} title={name} className="h-5 w-5 rounded-full border border-white/25" style={{ background: hex }} />
+                      ))}
+                      <span className="ml-1 text-xs text-white/45">Bílá, dřevodekory, šedá, antracit a další</span>
+                    </div>
                   </article>
                 ))}
               </div>
             </div>
-            <p className="mt-10 text-xs text-white/35">Pracujeme také s profilovými systémy Inoutic Prestige, Arcade a Eforte.</p>
+            <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-7">
+              <p className="text-xs text-white/35">Pracujeme také s profilovými systémy Inoutic Prestige, Arcade a Eforte.</p>
+              <p className="flex items-center gap-2 text-xs font-semibold text-[#E6A05D]"><Icon name="check" className="h-4 w-4" /> Na oba profily lze čerpat dotaci Nová zelená úsporám</p>
+            </div>
           </div>
         </section>
 
@@ -340,7 +419,7 @@ export default function App() {
               <div className="absolute right-6 bottom-6 left-6 border border-white/20 bg-[#1E2429]/85 p-6 text-white backdrop-blur">
                 <div className="flex items-center gap-4">
                   <Icon name="lock" className="h-9 w-9 text-[#79B0C9]" />
-                  <div><b className="block">Titan AF</b><span className="text-xs text-white/55">Bezpečí v každém detailu</span></div>
+                  <div><b className="block">Siegenia Aubi Titan AF</b><span className="text-xs text-white/55">Celoobvodové kování se zvýšenou bezpečností</span></div>
                 </div>
               </div>
             </div>
@@ -348,7 +427,7 @@ export default function App() {
               <Eyebrow>Kování a bezpečnost</Eyebrow>
               <h2>Německé kování Siegenia Aubi Titan AF</h2>
               <p className="mt-6 text-lg leading-8 text-black/58">
-                Maximální pohodlí při každém otevření. Robustní celoobvodové kování doplňuje chytrá pojistka proti chybnému otevření.
+                Okna osazujeme celoobvodovým kováním se zvýšenou bezpečností od německého výrobce Siegenia Aubi. Robustní mechanismus doplňuje pojistka proti chybnému otevření.
               </p>
               <div className="mt-9 grid gap-x-6 gap-y-7 sm:grid-cols-2">
                 {[
@@ -356,6 +435,8 @@ export default function App() {
                   ["Skryté kování", "Čistý vzhled bez viditelných pantů jako volitelná výbava."],
                   ["Mikroventilace ve standardu", "U všech otvíravě sklopných oken pro snadné větrání."],
                   ["Kliky Secustik", "Bezpečnostní mechanismus slyšitelně zapadne při otočení."],
+                  ["Dveře: kování KFV, panty Joker", "Vchodové dveře s vícebodovým zámkem a seřiditelnými panty."],
+                  ["Bezpečnostní vložka Mul-T-Lock 7×7", "Včetně pěti klíčů a bezpečnostní karty."],
                 ].map(([title, text]) => (
                   <div key={title} className="border-t border-black/15 pt-5">
                     <h3 className="text-sm font-bold">{title}</h3>
@@ -371,9 +452,9 @@ export default function App() {
           <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
             <div className="section-pad px-5 lg:pl-[max(2rem,calc((100vw-1220px)/2))] lg:pr-20">
               <Eyebrow>Zasklení</Eyebrow>
-              <h2>Izolační dvojskla s rámečkem Swisspacer</h2>
+              <h2>Izolační dvojskla i trojskla s rámečkem Swisspacer</h2>
               <p className="mt-6 max-w-xl text-base leading-7 text-black/58">
-                Teplý distanční rámeček Swisspacer omezuje tepelný most na okraji skla. Výsledkem jsou nižší tepelné ztráty a vyšší odolnost proti kondenzaci.
+                Teplý distanční rámeček Swisspacer omezuje tepelný most na okraji skla. Výsledkem jsou nižší tepelné ztráty a vyšší odolnost proti kondenzaci. Profily 76 a 88 standardně osazujeme trojsklem.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {["Méně tepelných ztrát", "Omezení kondenzace", "Vyšší komfort"].map((item) => (
@@ -381,8 +462,8 @@ export default function App() {
                 ))}
               </div>
             </div>
-            <div className="relative min-h-[430px] overflow-hidden">
-              <img src={interiorImage} alt="Teplý interiér s velkým oknem" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="relative min-h-[430px] overflow-hidden bg-white">
+              <img src="/img/gallery/Image01.jpg" alt="Řez okenním profilem s izolačním zasklením" className="absolute inset-0 h-full w-full object-cover object-center" />
               <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-[#E7ECEB] to-transparent" />
               <div className="absolute right-7 bottom-7 bg-[#C4762E] px-6 py-5 text-white">
                 <Icon name="sun" className="mb-2 h-7 w-7" /><b className="text-sm">Teplo zůstává doma</b>
@@ -425,9 +506,6 @@ export default function App() {
             <div className="relative min-h-[510px]">
               <img src={garageImage} alt="Moderní garážová vrata" className="absolute inset-0 h-full w-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1E2429]/45" />
-              <div className="absolute bottom-6 left-6 flex items-center gap-3 bg-white px-5 py-4 text-[#1B2126]">
-                <Icon name="play" className="h-5 w-5 text-[#2E6B8A]" /><span className="text-xs font-bold">Prohlédnout video realizace</span>
-              </div>
             </div>
             <div className="section-pad flex items-center px-5 lg:pl-20 lg:pr-[max(2rem,calc((100vw-1220px)/2))]">
               <div>
@@ -477,18 +555,15 @@ export default function App() {
           <div className="mx-auto max-w-[1220px] px-5">
             <div className="flex flex-wrap items-end justify-between gap-7">
               <div><Eyebrow>Naše práce</Eyebrow><h2>Realizace, za kterými si stojíme</h2></div>
-              <a href="#" className="flex items-center gap-2 text-sm font-bold text-[#2E6B8A]">Zobrazit fotogalerii <Icon name="arrow" className="h-5 w-5" /></a>
+              <button type="button" onClick={() => setGalleryOpen(!galleryOpen)} className="flex items-center gap-2 text-sm font-bold text-[#2E6B8A]">
+                {galleryOpen ? "Zobrazit méně" : `Zobrazit celou fotogalerii (${galleryPhotos.length})`} <Icon name="arrow" className={`h-5 w-5 transition ${galleryOpen ? "-rotate-90" : "rotate-90"}`} />
+              </button>
             </div>
             <div className="mt-12 grid auto-rows-[230px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                [heroImage, "Okna v rodinném domě", "lg:col-span-2 lg:row-span-2"],
-                [interiorImage, "Interiérové stínění", ""],
-                [windowImage, "Precizní detail montáže", ""],
-                [houseImage, "Kompletní realizace", "lg:col-span-2"],
-              ].map(([src, title, classes]) => (
-                <figure key={title} className={`gallery-item group ${classes}`}>
-                  <img src={src} alt={title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                  <figcaption><span>{title}</span><Icon name="arrow" className="h-5 w-5" /></figcaption>
+              {(galleryOpen ? galleryPhotos : galleryPhotos.slice(0, 6)).map((photo, i) => (
+                <figure key={photo.src} className={`gallery-item group ${i === 0 ? "lg:col-span-2 lg:row-span-2" : i === 3 ? "lg:col-span-2" : ""}`}>
+                  <img src={photo.src} alt={photo.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <figcaption><span>{photo.title}</span><Icon name="arrow" className="h-5 w-5" /></figcaption>
                 </figure>
               ))}
             </div>
@@ -517,8 +592,16 @@ export default function App() {
                 <div><span className="contact-label">E-mail</span><p><a href="mailto:emildoha@tiscali.cz">emildoha@tiscali.cz</a></p></div>
                 <div><span className="contact-label">Otevírací doba</span><p>Po–Pá &nbsp; 8:00–16:00<br /><span className="text-white/45">So–Ne &nbsp; zavřeno</span></p></div>
               </div>
-              <a href="https://maps.google.com/?q=Javorová+282+Černošín" target="_blank" rel="noreferrer" className="mt-10 flex items-center justify-between border border-white/15 bg-white/5 p-5 text-sm font-bold">
-                Zobrazit na mapě <Icon name="arrow" className="h-5 w-5 text-[#78B2CC]" />
+              <iframe
+                title="Mapa — Javorová 282, Černošín"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.492038557983!2d12.884086115882015!3d49.81441674086889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470a8321cb7ac1a9%3A0xb7923bd2b9eaf4c0!2zSmF2b3JvdsOhIDI4MiwgMzQ5IDU4IMSMZXJub8Whw61u!5e0!3m2!1scs!2scz!4v1507580856695"
+                className="mt-10 h-56 w-full border border-white/15 grayscale-[.4]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <a href="https://maps.google.com/?q=Javorová+282+Černošín" target="_blank" rel="noreferrer" className="mt-4 flex items-center justify-between border border-white/15 bg-white/5 p-5 text-sm font-bold">
+                Otevřít v Google Maps <Icon name="arrow" className="h-5 w-5 text-[#78B2CC]" />
               </a>
             </div>
           </div>
@@ -528,6 +611,10 @@ export default function App() {
       <footer className="border-t border-white/10 bg-[#151A1E] text-white/55">
         <div className="mx-auto flex max-w-[1280px] flex-col gap-6 px-5 py-8 text-xs md:flex-row md:items-center md:justify-between lg:px-8">
           <b className="text-base tracking-wider text-white">EDO OKNA</b>
+          <div className="flex items-center gap-4">
+            <img src="/img/spolehliva-firma.png" alt="Spolehlivá firma 2023" className="h-12 w-12" />
+            <img src="/img/ceska-okna.jpg" alt="Zaručeně česká okna" className="h-11 w-11 rounded-sm" />
+          </div>
           <p>IČ 75950537 &nbsp;·&nbsp; DIČ CZ8001092308</p>
           <p>© 2026 EDO OKNA — Emil Doha</p>
         </div>
