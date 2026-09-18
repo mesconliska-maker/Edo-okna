@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    { "source": "/okna_dvere", "destination": "/okna-a-dvere", "permanent": true },
+    { "source": "/profil-koemmerling-76", "destination": "/okna-a-dvere#profil-76", "permanent": true },
+    { "source": "/profil-koemmerling-88", "destination": "/okna-a-dvere#profil-88", "permanent": true },
+    { "source": "/zaluzie", "destination": "/zaluzie-a-site", "permanent": true },
+    { "source": "/site", "destination": "/zaluzie-a-site#site", "permanent": true },
+    { "source": "/kontakty", "destination": "/kontakt", "permanent": true },
+    { "source": "/certifikaty", "destination": "/fotogalerie", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!img/|assets/|favicon).*)", "destination": "/index.html" }
+  ]
+}
